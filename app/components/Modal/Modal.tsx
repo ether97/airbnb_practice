@@ -4,6 +4,9 @@ import { useCallback, useEffect, useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import Button from "../Button";
 
+import { AiFillGithub } from "react-icons/ai";
+import { FcGoogle } from "react-icons/fc";
+
 interface ModalProps {
   isOpen?: boolean;
   onClose: () => void;
@@ -99,6 +102,18 @@ const Modal: React.FC<ModalProps> = ({
                     color="rose-500"
                   />
                 </div>
+                <Button
+                  label="Signup with Google"
+                  color="black"
+                  icon={FcGoogle}
+                  outline
+                />
+                <Button
+                  outline
+                  label="Signup with Github"
+                  color="gray"
+                  icon={AiFillGithub}
+                />
               </div>
             </div>
           </div>

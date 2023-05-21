@@ -4,7 +4,7 @@ import { IconType } from "react-icons/lib";
 
 interface ButtonProps {
   disabled?: boolean;
-  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   small?: boolean;
   outline?: boolean;
   color: string;
@@ -17,7 +17,7 @@ const Button: React.FC<ButtonProps> = ({
   onClick,
   small,
   outline,
-  color,
+  color = "white",
   label,
   icon: Icon,
 }) => {
@@ -27,7 +27,7 @@ const Button: React.FC<ButtonProps> = ({
       onClick={onClick}
       className={`
       ${outline ? `bg-white` : `bg-${color}`} 
-      ${outline ? "text-black" : "text-white"} 
+      ${outline ? "text-black" : `text-white`} 
       ${outline ? `border-black` : `border-${color}`} 
       hover:opacity-80
       transition
