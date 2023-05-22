@@ -7,6 +7,7 @@ import Button from "../Button";
 import { AiFillGithub } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillFacebook } from "react-icons/ai";
+import { signIn } from "next-auth/react";
 
 interface ModalProps {
   isOpen?: boolean;
@@ -108,12 +109,14 @@ const Modal: React.FC<ModalProps> = ({
                   color="black"
                   icon={FcGoogle}
                   outline
+                  onClick={() => signIn("google")}
                 />
                 <Button
                   outline
                   label="Log in with Github"
                   color="gray"
                   icon={AiFillGithub}
+                  onClick={() => signIn("github")}
                 />
                 <Button
                   outline

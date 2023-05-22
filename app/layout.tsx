@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import RegisterModal from "./components/Modal/RegisterModal";
 import Toast from "./libs/toast";
 import LoginModal from "./components/Modal/LoginModal";
+import getCurrentUser from "./actions/getCurrentUser";
 
 export const metadata = {
   title: "Create Next App",
@@ -15,15 +16,17 @@ const font = Nunito({
   subsets: ["latin"],
 });
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const currentUser = await getCurrentUser();
+
   return (
     <html lang="en">
       <body className={font.className}>
-        <Navbar />
+        <Navbar currentUser={currentUser} />
         <RegisterModal />
         <LoginModal />
         <Toast />

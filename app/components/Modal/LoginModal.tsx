@@ -5,7 +5,6 @@ import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
-import axios from "axios";
 
 import useRegisterModal from "@/app/hooks/useRegisterModal";
 import Modal from "./Modal";
@@ -42,6 +41,7 @@ const LoginModal = () => {
       if (callback?.ok) {
         toast.success("successfully logged in!");
         router.refresh();
+        loginModal.onClose();
       }
 
       if (callback?.error) {
