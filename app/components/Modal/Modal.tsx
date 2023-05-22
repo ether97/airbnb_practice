@@ -122,6 +122,7 @@ const Modal: React.FC<ModalProps> = ({
                   icon={AiFillFacebook}
                 />
               </div>
+              <div>{footer}</div>
             </div>
           </div>
         </div>

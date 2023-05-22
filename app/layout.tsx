@@ -4,6 +4,7 @@ import { Nunito } from "next/font/google";
 import Navbar from "./components/Navbar/Navbar";
 import RegisterModal from "./components/Modal/RegisterModal";
 import Toast from "./libs/toast";
+import LoginModal from "./components/Modal/LoginModal";
 
 export const metadata = {
   title: "Create Next App",
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={font.className}>
         <Navbar />
         <RegisterModal />
+        <LoginModal />
         <Toast />
         {children}
       </body>
