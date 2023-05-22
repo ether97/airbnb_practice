@@ -6,6 +6,7 @@ import Button from "../Button";
 
 import { AiFillGithub } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
+import { AiFillFacebook } from "react-icons/ai";
 
 interface ModalProps {
   isOpen?: boolean;
@@ -103,16 +104,22 @@ const Modal: React.FC<ModalProps> = ({
                   />
                 </div>
                 <Button
-                  label="Signup with Google"
+                  label="Log in with Google"
                   color="black"
                   icon={FcGoogle}
                   outline
                 />
                 <Button
                   outline
-                  label="Signup with Github"
+                  label="Log in with Github"
                   color="gray"
                   icon={AiFillGithub}
+                />
+                <Button
+                  outline
+                  label="Log in with Facebook"
+                  color="#4267B2"
+                  icon={AiFillFacebook}
                 />
               </div>
             </div>

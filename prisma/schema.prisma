@@ -81,3 +81,5 @@ model Reservation {
 
 
 }
+
+// to push collections into the db: npx prisma db push

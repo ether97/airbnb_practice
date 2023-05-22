@@ -37,7 +37,7 @@ const RegisterModal = () => {
         registerModal.onClose();
       })
       .catch((error) => {
-        toast.error("something went wrong!");
+        toast.error(`something went wrong: ${error}`);
       })
       .finally(() => {
         setIsLoading(false);
@@ -56,8 +56,8 @@ const RegisterModal = () => {
         required
       />
       <Input
-        id="username"
-        label="Username"
+        id="name"
+        label="Name"
         disabled={isLoading}
         register={register}
         errors={errors}
